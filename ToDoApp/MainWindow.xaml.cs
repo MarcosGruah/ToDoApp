@@ -20,9 +20,23 @@ namespace ToDoApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int taskCount = 1;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddTodoButton_Click(object sender, RoutedEventArgs e)
+        {
+            string todoText = TodoInput.Text;
+            if (!string.IsNullOrEmpty(todoText))
+            {
+                TextBlock todoItem = new TextBlock { Text = $"{taskCount} - {todoText}" };
+                TodoList.Children.Add(todoItem);
+                TodoInput.Clear();
+                taskCount++;
+            }
         }
     }
 }
