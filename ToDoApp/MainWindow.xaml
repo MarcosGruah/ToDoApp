@@ -25,7 +25,7 @@
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
             <StackPanel x:Name="TodoList"></StackPanel>
         </ScrollViewer>
-        <TextBox x:Name="TodoInput" Grid.Row="3" Grid.Column="1" />
+        <TextBox x:Name="TodoInput" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" />
         <Button Grid.Row="5" Grid.Column="1" Content="Add Task" Background="#FFF0F0F0" Click="AddTodoButton_Click" />
     </Grid>
 </Window>
